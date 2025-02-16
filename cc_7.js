@@ -63,3 +63,17 @@ function calculateShippingCost(weight, location, expedited = false) {
 // lines below run the function using the parameters provided
 calculateShippingCost(10, "USA", true);
 calculateShippingCost(5, "Canada", false);
+
+
+// Task 5: Returning Values
+
+// the lines below create a function to calculate the interest on a loan
+function calculateLoanInterest(principal, rate, years) {
+    let loanInterest = (principal * rate * years).toFixed(2); // creates the equation to calcualte the interest amount
+    return `Total Interest: $${loanInterest}` // returns the result in a template literal form
+};
+
+
+// the lines below run the function using the parameters provided and log its results in the console
+console.log(calculateLoanInterest(1000, 0.05, 3));
+console.log(calculateLoanInterest(5000, 0.07, 5));
