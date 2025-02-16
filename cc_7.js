@@ -94,3 +94,23 @@ function filterHighValueTransactions(transactions, filterFunction) {
 // line 95 runs the filter function using the parameters provided
 filterHighValueTransactions(transactions,amount => amount > 1000);
 
+
+// Task 7: Closures
+
+// the lines below create a function to track budget expenses
+function createBudgetTracker() {
+    let totalBudget = 0;
+
+    return function(expense) {
+        totalBudget += expense; // this line adds each expense to the last
+        console.log(`Current Balance: -$${totalBudget}`); // this line logs the result in the console
+    };
+};
+
+// line 111 gives a variable the result of the function
+let budget = createBudgetTracker()
+
+// the lines below run the function using the parameters provided
+budget(300);
+budget(200);
+
