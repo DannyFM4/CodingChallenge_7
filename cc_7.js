@@ -15,7 +15,7 @@ calculateInvoice(500, 0.1, 20);
 // Task 2: Function Expression
 
 // lines below create a function to calculate the hourly wage of an employee
-function calculateHourlyWage(salary, hoursPerWeek) {
+const calculateHourlyWage = function (salary, hoursPerWeek) {
     let hourlyWage = salary/(hoursPerWeek*52);  // creates the equation in the function
     console.log(`Hourly Wage: $${hourlyWage.toFixed(2)}`);  // this line logs the output in the console
 };
